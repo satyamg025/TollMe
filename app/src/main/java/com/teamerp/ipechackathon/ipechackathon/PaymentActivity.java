@@ -277,7 +277,12 @@ public class PaymentActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent(PaymentActivity.this,qr.class);
+        startActivity(intent);
+    }
 
     private void showDialogMessage(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
