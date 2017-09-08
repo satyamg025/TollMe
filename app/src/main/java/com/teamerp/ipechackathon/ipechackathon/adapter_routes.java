@@ -1,10 +1,13 @@
 package com.teamerp.ipechackathon.ipechackathon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -50,6 +53,8 @@ public class adapter_routes extends RecyclerView.Adapter<adapter_routes.view_hol
     public class view_holder extends RecyclerView.ViewHolder {
 
         public TextView summary,time,distance,traffic;
+        public LinearLayout ll;
+        public Button pay;
         public view_holder(View itemView) {
             super(itemView);
 
@@ -57,6 +62,22 @@ public class adapter_routes extends RecyclerView.Adapter<adapter_routes.view_hol
             distance=(TextView)itemView.findViewById(R.id.distance);
             time=(TextView)itemView.findViewById(R.id.time);
             traffic=(TextView)itemView.findViewById(R.id.traffic);
+            ll=(LinearLayout)itemView.findViewById(R.id.ll);
+            pay=(Button)itemView.findViewById(R.id.pay);
+
+            pay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(context,PaymentActivity.class);
+                    context.startActivity(intent);
+                }
+            });
+            ll.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MainActivity.setRoute(getAdapterPosition());
+                }
+            });
         }
 
     }

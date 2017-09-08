@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.location.Address;
 import android.location.Geocoder;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
@@ -20,6 +21,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -61,12 +63,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     Toolbar search;
     static MapView mapView;
     static GoogleMap googleMap = null;
+    static int position=0;
     private static BottomSheetBehavior bottomSheetBehavior;
-    List<LatLng> MarkerPoints = new ArrayList<LatLng>();
+    static List<LatLng> MarkerPoints = new ArrayList<LatLng>();
     GPSTracker gpsTracker;
     static RecyclerView recyclerView;
-    String re;
+    static String re;
     RouteDetails routeDetails=null;
+    TextView curr;
     static LinearLayoutManager linearLayoutManager;
 
     @Override
@@ -77,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         // ll=(LinearLayout)findViewById(R.id.ll);
         gpsTracker= new GPSTracker(MainActivity.this);
         search = (Toolbar) findViewById(R.id.search);
+        curr=(TextView)findViewById(R.id.curr);
 
         search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -182,6 +187,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onLowMemory() {
         super.onLowMemory();
         mapView.onLowMemory();
+    }
+
+    public static void setRoute(int pos){
+        position=pos;
+        ParserTask parserTask = new ParserTask();
+        parserTask.execute(re);
     }
 
     @Override
@@ -356,6 +367,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
                 }
                 else{
+                    googleMap.clear();
+                    googleMap.addMarker(new MarkerOptions().position(MarkerPoints.get(0)).title(""));
                     MarkerPoints.add(1,latLng);
                     googleMap.addMarker(new MarkerOptions().position(latLng).title(""));
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
@@ -388,6 +401,19 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             LatLng latLng = new LatLng(gpsTracker.getLatitude(), gpsTracker.getLongitude());
             addMarker(latLng,"origin");
+            List<Address> addresses;
+
+            try {
+                    addresses = geocoder.getFromLocation(gpsTracker.getLatitude(),gpsTracker.getLongitude(), 1);
+                    if (addresses.size() != 0) {
+                        curr.setText(addresses.get(0).getLocality());
+                    }
+                    else{
+                    }
+                } catch (Exception e) {
+
+                }
+
         }
         else{
             Toast.makeText(MainActivity.this,"Can't get current location",Toast.LENGTH_LONG).show();
@@ -401,6 +427,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
                     LatLng latLng = new LatLng(gpsTracker.getLatitude(), gpsTracker.getLongitude());
                     addMarker(latLng,"origin");
+                    List<Address> addresses;
+
+                    try {
+                        addresses = geocoder.getFromLocation(gpsTracker.getLatitude(),gpsTracker.getLongitude(), 1);
+                        if (addresses.size() != 0) {
+                            curr.setText(addresses.get(0).getLocality());
+                        }
+                        else{
+                        }
+                    } catch (Exception e) {
+
+                    }
                 }
                 else{
                     Toast.makeText(MainActivity.this,"Can't get current location",Toast.LENGTH_LONG).show();
@@ -419,7 +457,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
-    private class ParserTask extends AsyncTask<String, Integer, List<List<HashMap<String, String>>>> {
+    private static class ParserTask extends AsyncTask<String, Integer, List<List<HashMap<String, String>>>> {
 
         // Parsing the data in non-ui thread
         @Override
@@ -436,7 +474,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Log.d("ParserTask", parser.toString());
 
                 // Starts parsing data
-                routes = parser.parse(jObject,0);
+                routes = parser.parse(jObject,position);
                 Log.d("ParserTask","Executing routes");
                 Log.d("ParserTask2",routes.toString());
 
@@ -453,6 +491,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             ArrayList<LatLng> points;
             PolylineOptions lineOptions = null;
 
+            googleMap.clear();
+
+            googleMap.addMarker(new MarkerOptions().position(MarkerPoints.get(0)).title(""));
+            googleMap.addMarker(new MarkerOptions().position(MarkerPoints.get(1)).title(""));
             // Traversing through all the routes
             for (int i = 0; i < result.size(); i++) {
                 points = new ArrayList<>();
