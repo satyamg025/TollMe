@@ -61,6 +61,7 @@ import static android.provider.Telephony.Mms.Part.TEXT;
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     Toolbar search;
+    static String vehicle;
     static MapView mapView;
     static GoogleMap googleMap = null;
     static int position=0;
@@ -105,6 +106,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         //mMapView.onDestroy();
         // needed to get the map to display immediately
+        dialog dialog_ = new dialog();
+        dialog_.show(getFragmentManager(),"Vehicle");
 
         mapView.getMapAsync(this);
         setSupportActionBar(search);
@@ -117,9 +120,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
+    public static void setVehicle(String v){
+        vehicle=v;
+    }
     public static void showBottomSheet(Context context,RouteDetails routeDetails){
 
         Log.e("summ",String.valueOf(routeDetails));
+        Toast.makeText(context,vehicle,Toast.LENGTH_LONG).show();
 //        Toast.makeText(context,String.valueOf(summary),Toast.LENGTH_LONG).show();
         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         recyclerView.setHasFixedSize(true);

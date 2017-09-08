@@ -276,7 +276,7 @@ public class PaymentActivity extends AppCompatActivity {
             }
         }
     }
-    
+
 
 
     private void showDialogMessage(String message) {

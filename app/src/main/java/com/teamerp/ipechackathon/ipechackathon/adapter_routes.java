@@ -43,6 +43,7 @@ public class adapter_routes extends RecyclerView.Adapter<adapter_routes.view_hol
         holder.time.setText(routeDetails.getTime().get(position));
         holder.distance.setText(routeDetails.getDistance().get(position));
         holder.traffic.setText(routeDetails.getTraffic().get(position));
+        holder.pay.setText("Rs." + (int)((Math.random()*10000)%250));
     }
 
 
