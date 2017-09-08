@@ -29,7 +29,7 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2 wheeler"
+            android:text="car/jeep/van"
             android:textSize="18sp"
             android:id="@+id/two"/>
         <View
@@ -41,7 +41,7 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3 wheeler"
+            android:text="bus/truck"
             android:textSize="18sp"
             android:id="@+id/three"/>
         <View
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:text="more"
+            android:text="more( more than 3 axle)"
             android:id="@+id/more"/>
         <View
             android:layout_width="match_parent"
