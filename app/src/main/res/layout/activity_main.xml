@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.teamerp.ipechackathon.ipechackathon.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+           android:background="@color/colorPrimary"
+           android:orientation="vertical"
+           android:id="@+id/search">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_margin="16dp"
+              android:id="@+id/ll"
+              android:layout_height="wrap_content">
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:tint="#fff"
+                  android:src="@drawable/ic_search_black_24dp" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:textColor="#fff"
+                  android:layout_marginLeft="30dp"
+                  android:text="Search Your Destination"/>
+          </LinearLayout>
+       </android.support.v7.widget.Toolbar>
 
-</android.support.constraint.ConstraintLayout>
+    <com.google.android.gms.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/mapView">
+    </com.google.android.gms.maps.MapView>
+    </LinearLayout>
+    <include layout="@layout/bottom_sheet"/>
+
+</android.support.design.widget.CoordinatorLayout>
