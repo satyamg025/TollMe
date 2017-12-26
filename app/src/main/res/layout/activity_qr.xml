@@ -6,20 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="20dp"
     android:gravity="center_horizontal"
     tools:context="com.teamerp.ipechackathon.ipechackathon.qr">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/colorPrimary">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scan the qr to pass through toll booth"
-        android:textStyle="bold"
+        android:text="Scan the QR Cde"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
         android:textSize="18sp"/>
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/download"/>
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/qr_img"
+        android:layout_marginTop="80dp" />
 </LinearLayout>

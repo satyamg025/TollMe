@@ -12,7 +12,7 @@
         android:textColor="@color/colorPrimary"
         android:text="Select Vehicle Type"
         android:layout_marginTop="10dp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         android:textSize="22sp"/>
 
     <View
@@ -29,7 +29,9 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="car/jeep/van"
+            android:text="Car/ Jeep/ Van"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:textSize="18sp"
             android:id="@+id/two"/>
         <View
@@ -41,8 +43,10 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="bus/truck"
+            android:text="Bus/ Truck"
             android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:id="@+id/three"/>
         <View
             android:layout_width="match_parent"
@@ -54,7 +58,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:text="more( more than 3 axle)"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:text="Others (More than 3 axle)"
             android:id="@+id/more"/>
         <View
             android:layout_width="match_parent"

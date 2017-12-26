@@ -1,5 +1,7 @@
 package com.teamerp.ipechackathon.ipechackathon;
 
+import android.util.Log;
+
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONArray;
@@ -44,7 +46,9 @@ public class DataParser {
                             String polyline = "";
                             polyline = (String) ((JSONObject) ((JSONObject) jSteps.get(k)).get("polyline")).get("points");
                             List<LatLng> list = decodePoly(polyline);
+                            adapter_routes.list=list;
 
+                            Log.e("pnts",String.valueOf(list));
                             /** Traversing all points */
                             for (int l = 0; l < list.size(); l++) {
                                 HashMap<String, String> hm = new HashMap<>();
