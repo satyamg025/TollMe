@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1093301982213",
+    "firebase_url": "https://ipec-hackathon.firebaseio.com",
+    "project_id": "ipec-hackathon",
+    "storage_bucket": "ipec-hackathon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093301982213:android:389dd3da9828a14d",
+        "android_client_info": {
+          "package_name": "com.teamerp.ipechackathon.ipechackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093301982213-bjvle4e0bcigdu0oq3cauclg1rr7lobd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeWKyo6UbQl8M7LPaGnYlGeAp-wKBlQOg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

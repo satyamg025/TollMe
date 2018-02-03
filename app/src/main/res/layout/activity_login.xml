@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context="com.teamerp.ipechackathon.ipechackathon.LoginActivity">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/primary_material_light">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +38,7 @@
             android:textSize="22sp"
             android:id="@+id/tollme"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/primary_material_light"/>
 
             <ImageView
                 android:layout_width="90dp"
@@ -44,18 +56,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/car_number"
-                    android:textColorHint="@color/colorAccent"
-                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/primary_material_light"
                     android:hint="Enter Your Car Number"
                     android:drawableLeft="@drawable/ic_drive_eta_black_24dp"
-                    android:drawableTint="@color/colorPrimary"
+                    android:drawableTint="@color/primary_material_light"
                     android:drawablePadding="10dp"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/primary_dark_material_light"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"

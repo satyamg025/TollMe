@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.payu.custombrowser:payu-custom-browser-6.1.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/fa62ba8fcbedb08d2b9e9ea758451b9adf4a232b/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/fa62ba8fcbedb08d2b9e9ea758451b9adf4a232b/output/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/payu-custom-browser-6.1.1.aar/476c2c409b227326190a2c62a90b1de0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/payu-custom-browser-6.1.1.aar/476c2c409b227326190a2c62a90b1de0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70dp"
         android:text="Email-id"
+        android:textColor="@color/activate_text_color"
         android:textSize="14sp" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_email_black_24dp"
-            android:tint="#B6B6B6"
+            android:tint="@color/activate_text_color"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"/>
         <TextView
@@ -31,7 +32,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="7dp"
             android:textSize="18sp"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/primary_dark_material_light"
             android:text="satyamg025@gmail.com"
             />
     </LinearLayout>
@@ -42,6 +43,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
         android:text="Mobile No"
+        android:textColor="@color/activate_text_color"
         android:textSize="14sp" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_call_black_24dp"
-            android:tint="#B6B6B6"
+            android:tint="@color/activate_text_color"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"/>
         <TextView
@@ -60,7 +62,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="7dp"
             android:textSize="18sp"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/primary_dark_material_light"
             android:text="9258697341"
             />
     </LinearLayout>
@@ -71,6 +73,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
         android:text="Address"
+        android:textColor="@color/activate_text_color"
         android:textSize="14sp" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_location_on_black_24dp"
-            android:tint="#B6B6B6"
+            android:tint="@color/activate_text_color"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"/>
         <TextView
@@ -89,7 +92,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="7dp"
             android:textSize="18sp"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/primary_dark_material_light"
             android:text="Shivam Vihar Ghaziabad"
             />
     </LinearLayout>
@@ -100,6 +103,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
         android:text="Vehicle Number"
+        android:textColor="@color/activate_text_color"
         android:textSize="14sp" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -109,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_confirmation_number_black_24dp"
-            android:tint="#B6B6B6"
+            android:tint="@color/activate_text_color"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"/>
         <TextView
@@ -118,7 +122,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="7dp"
             android:textSize="18sp"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/primary_dark_material_light"
             android:text="HR 05 2508"
             />
 
@@ -130,6 +134,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
         android:text="Vehicle Type"
+        android:textColor="@color/activate_text_color"
         android:textSize="14sp" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -139,7 +144,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_drive_eta_black_24dp"
-            android:tint="#B6B6B6"
+            android:tint="@color/activate_text_color"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"/>
         <TextView
@@ -148,7 +153,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="7dp"
             android:textSize="18sp"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/primary_dark_material_light"
             android:text="Two Wheeler"
             />
     </LinearLayout>

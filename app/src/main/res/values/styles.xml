@@ -1,17 +1,16 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="MyTheme.AppCompat">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="ToolBarWithNavigationBack">
         <item name="navigationIcon">@drawable/abc_ic_ab_back_material</item>
     </style>
+
+    <style name="Theme.Material.NoActionBar.TranslucentDecor.Light.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar" />
 
 </resources>

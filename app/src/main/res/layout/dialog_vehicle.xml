@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/primary_dark_material_light"
         android:text="Select Vehicle Type"
         android:layout_marginTop="10dp"
         android:textStyle="bold|italic"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Car/ Jeep/ Van"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/activate_text_color"
             android:textStyle="bold"
             android:textSize="18sp"
             android:id="@+id/two"/>
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="Bus/ Truck"
             android:textSize="18sp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/activate_text_color"
             android:textStyle="bold"
             android:id="@+id/three"/>
         <View
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/activate_text_color"
             android:textStyle="bold"
             android:text="Others (More than 3 axle)"
             android:id="@+id/more"/>
@@ -79,7 +79,7 @@
         android:textStyle="italic"
         android:textSize="16sp"
         android:visibility="gone"
-        android:background="@color/colorPrimary"
+        android:background="@color/primary_dark_material_light"
         android:textColor="@color/white"
         android:id="@+id/submit"/>
 

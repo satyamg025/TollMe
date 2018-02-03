@@ -19,7 +19,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBSAie3Ux8f-f0RhIksE7vLDXXul685pls" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.Material.NoActionBar.TranslucentDecor.Light.NoActionBar">
 
         </activity>
         <activity android:name=".PaymentActivity" />

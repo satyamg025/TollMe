@@ -16,7 +16,7 @@ import android.widget.ImageView;
 public class dialog_qr extends DialogFragment {
 
     View view;
-    ImageView qr,close;
+   // ImageView qr,close;
 
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -24,15 +24,15 @@ public class dialog_qr extends DialogFragment {
         view = inflater.inflate(R.layout.dialog_qr, null);
         builder.setView(view);
 
-        qr=(ImageView) view.findViewById(R.id.qr);
-        close=(ImageView)view.findViewById(R.id.close);
+       // qr=(ImageView) view.findViewById(R.id.qr);
+       // close=(ImageView)view.findViewById(R.id.close);
 
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dismiss();
-            }
-        });
+//        close.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dismiss();
+//            }
+//        });
         return builder.create();
     }
 }
